@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="MX ESPORTS — Maximum Xtreme. One Legacy. Est. 2021.">
+  <title>MX ESPORTS OFFICIAL</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <style>
+    :root{--bg:#080808;--panel:#111;--panel2:#171717;--red:#ed172b;--red2:#ff3447;--text:#f5f5f5;--muted:#a6a6a6;--line:#292929;--safe-bottom:env(safe-area-inset-bottom,0px)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}button{font:inherit}.topbar{height:32px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;background:#050505;color:#c9c9c9;font-size:11px;border-bottom:1px solid #191919;letter-spacing:.5px}
+    header{position:sticky;top:0;z-index:20;background:rgba(8,8,8,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1100px;margin:auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:1.2px}.brand-mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(145deg,#ff3447,#8d0010);display:grid;place-items:center;font-style:italic;font-size:18px;box-shadow:0 5px 22px #ed172b44}
+    .brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:2px;font-weight:700;margin-top:2px}
+    .navlinks{display:flex;gap:20px;align-items:center;font-size:12px;color:#ccc}.navlinks a:hover{color:var(--red2)}
+    .install{border:0;border-radius:9px;background:var(--red);color:white;font-weight:850;padding:10px 13px;font-size:11px;cursor:pointer}.install:active,.cta:active{transform:scale(.97)}
+    main{max-width:1100px;margin:auto;padding:0 18px 100px}.hero{position:relative;overflow:hidden;margin:22px 0 30px;min-height:330px;border:1px solid #292929;border-radius:22px;background:radial-gradient(ellipse at 85% 25%,#6d0715 0,transparent 36%),linear-gradient(125deg,#171717,#080808 62%);display:flex;align-items:center;padding:34px}
+    .hero:after{content:"MX";position:absolute;right:3%;bottom:-70px;font-size:clamp(180px,34vw,360px);font-weight:1000;font-style:italic;letter-spacing:-25px;color:#ffffff08;pointer-events:none}
+    .hero-content{position:relative;z-index:1;max-width:610px}.eyebrow{font-size:10px;letter-spacing:3px;color:var(--red2);font-weight:900}.hero h1{font-size:clamp(38px,8vw,76px);line-height:.92;letter-spacing:-3px;margin:13px 0}.hero h1 span{color:var(--red)}.hero p{color:#c2c2c2;max-width:460px;line-height:1.65;font-size:14px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.cta{padding:12px 17px;border-radius:10px;background:var(--red);font-size:12px;font-weight:900;border:1px solid var(--red);cursor:pointer}.cta.secondary{background:transparent;border-color:#444;color:#eee}
+    section{margin:34px 0;scroll-margin-top:90px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:15px}.section-head h2{font-size:22px;margin:0;letter-spacing:-.5px}.section-head p{margin:5px 0 0;color:var(--muted);font-size:11px}.redline{width:38px;height:3px;background:var(--red);border-radius:4px;margin-bottom:9px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.card{background:linear-gradient(145deg,#171717,#0e0e0e);border:1px solid var(--line);border-radius:15px;padding:17px;min-width:0}.card:hover{border-color:#6f1b25}.team-mark{width:43px;height:43px;display:grid;place-items:center;background:#29070c;color:#ff5362;border:1px solid #64111d;border-radius:12px;font-weight:1000;font-style:italic;font-size:17px;margin-bottom:13px}.card h3{margin:0 0 6px;font-size:15px}.muted{color:var(--muted);font-size:12px;line-height:1.55}.pill{display:inline-block;margin-top:12px;padding:6px 9px;border:1px solid #55202a;border-radius:30px;color:#ff7180;font-size:9px;font-weight:800;letter-spacing:.7px}
+    .profile{display:grid;grid-template-columns:100px 1fr;gap:17px;align-items:center}.avatar{height:100px;width:100px;border-radius:17px;background:linear-gradient(145deg,#ed172b,#45000a);display:grid;place-items:center;font-size:33px;font-weight:1000;font-style:italic}.profile h3{font-size:20px;margin:0 0 4px}.profile .ign{color:#ff6878;font-size:12px;font-weight:800}.uid{font-size:10px;color:#999;margin-top:7px;word-break:break-all}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:17px}.stat{background:#0a0a0a;border:1px solid #242424;border-radius:10px;padding:12px 7px;text-align:center}.stat b{display:block;font-size:20px;color:#fff}.stat span{font-size:9px;color:#999;text-transform:uppercase;letter-spacing:.5px}
+    .management .card{text-align:center}.manager-avatar{height:62px;width:62px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;background:#30070d;border:1px solid #7b1724;color:#ff6473;font-weight:1000;font-size:20px}.role{color:#ff6575;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:1px}.socials{display:flex;gap:9px;flex-wrap:wrap}.social{display:inline-flex;padding:10px 13px;border:1px solid #333;border-radius:9px;color:#ddd;font-size:11px;font-weight:750}.social:hover{border-color:var(--red);color:white}
+    .highlights{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.highlight{padding:16px 10px;text-align:center;border:1px solid var(--line);border-radius:13px;background:linear-gradient(145deg,#171717,#0b0b0b)}.highlight strong{display:block;font-size:24px;color:var(--red2)}.highlight span{font-size:9px;letter-spacing:1px;color:#aaa;font-weight:800}
+    .about-box{border:1px solid var(--line);border-radius:15px;padding:20px;background:linear-gradient(110deg,#151515,#0b0b0b)}.about-box p{color:#bbb;font-size:13px;line-height:1.8;margin:0}
+    footer{border-top:1px solid var(--line);padding:24px 18px 32px;text-align:center;color:#888;font-size:10px;letter-spacing:.7px}
+    .mobile-nav{display:none}
+    .toast{position:fixed;left:50%;bottom:calc(82px + var(--safe-bottom));transform:translate(-50%,15px);opacity:0;pointer-events:none;background:#222;border:1px solid #444;padding:10px 14px;border-radius:9px;font-size:12px;transition:.25s;z-index:50}.toast.show{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:700px){.nav{padding:10px 14px}.navlinks{display:none}.hero{min-height:300px;padding:25px 20px;margin-top:15px}.hero h1{letter-spacing:-2px}.grid{grid-template-columns:1fr}.highlights{grid-template-columns:repeat(2,1fr)}main{padding-left:14px;padding-right:14px}.profile{grid-template-columns:75px 1fr;gap:12px}.avatar{height:75px;width:75px;font-size:27px}.stats{grid-template-columns:repeat(2,1fr)}.mobile-nav{display:flex;position:fixed;z-index:30;bottom:0;left:0;right:0;padding:9px 5px calc(9px + var(--safe-bottom));background:rgba(9,9,9,.97);backdrop-filter:blur(12px);border-top:1px solid #292929;justify-content:space-around}.mobile-nav a{font-size:9px;color:#aaa;text-align:center;display:grid;gap:4px;justify-items:center;min-width:54px}.mobile-nav a span{font-size:17px}.mobile-nav a.active{color:#ff5969}.section-head h2{font-size:20px}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><span id="today">LOADING DATE</span><span id="clock">00:00:00</span></div>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#home"><span class="brand-mark">MX</span><span>MX ESPORTS<small>MAXIMUM XTREME</small></span></a>
+      <div class="navlinks"><a href="#teams">TEAMS</a><a href="#players">PLAYER</a><a href="#management">MANAGEMENT</a><a href="#about">ABOUT</a></div>
+      <button class="install" id="installBtn" hidden>＋ INSTALL APP</button>
+    </nav>
+  </header>
+  <main id="home">
+    <div class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">INDIAN ESPORTS ORGANIZATION • EST. 2021</div>
+        <h1>MAXIMUM<br><span>XTREME.</span></h1>
+        <p>One team. One vision. One legacy. Welcome to the official home of MX ESPORTS.</p>
+        <div class="hero-actions"><a class="cta" href="#teams">EXPLORE TEAMS ↗</a><a class="cta secondary" href="https://www.instagram.com/officialmxislive/" target="_blank" rel="noopener">FOLLOW US</a></div>
+      </div>
+    </div>
+
+    <section id="teams">
+      <div class="section-head"><div><div class="redline"></div><h2>OUR TEAMS</h2><p>Built for competition. Driven by passion.</p></div></div>
+      <div class="grid">
+        <article class="card"><div class="team-mark">MX</div><h3>MX ESPORTS</h3><div class="muted">Our flagship competitive team.</div><span class="pill">MAIN ROSTER</span></article>
+        <article class="card"><div class="team-mark">PL</div><h3>PLAYERS</h3><div class="muted">Meet the players representing MX ESPORTS.</div><span class="pill">OUR ROSTER</span></article>
+        <article class="card"><div class="team-mark">MX</div><h3>MX COMMUNITY</h3><div class="muted">The community behind the legacy.</div><span class="pill">COMMUNITY</span></article>
+      </div>
+    </section>
+
+    <section id="players">
+      <div class="section-head"><div><div class="redline"></div><h2>FEATURED PLAYER</h2><p>Player profile and competitive stats.</p></div></div>
+      <article class="card">
+        <div class="profile"><div class="avatar">MX</div><div><h3>RAVI ARYA</h3><div class="ign">IGN: MXisLiVE18</div><div class="uid">BGMI UID: 5522401073</div><div class="uid"><a href="https://www.instagram.com/officialmxislive/" target="_blank" rel="noopener">@officialmxislive ↗</a></div></div></div>
+        <div class="stats">
+          <div class="stat"><b>12</b><span>Tournaments</span></div>
+          <div class="stat"><b>18</b><span>Matches</span></div>
+          <div class="stat"><b>48</b><span>Total Kills</span></div>
+          <div class="stat"><b>6</b><span>Top Kills</span></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="management">
+      <div class="section-head"><div><div class="redline"></div><h2>MANAGEMENT</h2><p>The people building the organization.</p></div></div>
+      <div class="grid management">
+        <article class="card"><div class="manager-avatar">RA</div><h3>RAVI ARYA</h3><div class="role">Owner</div><p class="muted">Leading the MX vision.</p><a class="social" href="https://www.instagram.com/officialmxislive/" target="_blank" rel="noopener">Instagram ↗</a></article>
+        <article class="card"><div class="manager-avatar">N</div><h3>NIKU</h3><div class="role">Founder</div><p class="muted">Building the foundation.</p></article>
+        <article class="card"><div class="manager-avatar">A</div><h3>ADITYA</h3><div class="role">Leader</div><p class="muted">Driving the team forward.</p></article>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-head"><div><div class="redline"></div><h2>ABOUT MX ESPORTS</h2><p>Maximum Xtreme. One Legacy.</p></div></div>
+      <div class="about-box"><p>MX ESPORTS was established in <b>2021</b> with a vision to build a strong esports identity. What started as a passion became a growing team and community. We believe in teamwork, consistency, discipline and the ambition to keep moving forward. <b>Maximum Xtreme. One Legacy.</b></p></div>
+      <div class="highlights" style="margin-top:12px">
+        <div class="highlight"><strong>2021</strong><span>YEAR FOUNDED</span></div>
+        <div class="highlight"><strong>MX</strong><span>MAXIMUM XTREME</span></div>
+        <div class="highlight"><strong>INDIA</strong><span>OUR HOME</span></div>
+        <div class="highlight"><strong>∞</strong><span>OUR AMBITION</span></div>
+      </div>
+    </section>
+
+    <section id="connect">
+      <div class="section-head"><div><div class="redline"></div><h2>CONNECT WITH US</h2><p>Follow the journey.</p></div></div>
+      <div class="socials">
+        <a class="social" href="https://www.instagram.com/officialmxislive/" target="_blank" rel="noopener">Instagram ↗</a>
+        <a class="social" href="https://www.youtube.com/results?search_query=MXISLIVE18" target="_blank" rel="noopener">YouTube ↗</a>
+      </div>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> MX ESPORTS • MAXIMUM XTREME. ONE LEGACY.</footer>
+  <nav class="mobile-nav" aria-label="Bottom navigation">
+    <a href="#home" class="active"><span>⌂</span>HOME</a><a href="#teams"><span>⚔</span>TEAMS</a><a href="#players"><span>♟</span>PLAYER</a><a href="#management"><span>♛</span>TEAM</a><a href="#about"><span>ⓘ</span>ABOUT</a>
+  </nav>
+  <div class="toast" id="toast">App ready</div>
+  <script>
+    // MX ESPORTS PWA — update team/player details in this file when needed.
+    const $ = (id) => document.getElementById(id);
+    function updateClock(){
+      const now = new Date();
+      $('today').textContent = now.toLocaleDateString('en-IN',{weekday:'short',day:'2-digit',month:'short',year:'numeric'}).toUpperCase();
+      $('clock').textContent = now.toLocaleTimeString('en-IN',{hour12:true});
+      $('year').textContent = now.getFullYear();
+    }
+    updateClock(); setInterval(updateClock,1000);
+    let deferredPrompt;
+    const installBtn = $('installBtn');
+    window.addEventListener('beforeinstallprompt',(event)=>{
+      event.preventDefault(); deferredPrompt=event; installBtn.hidden=false;
+    });
+    installBtn.addEventListener('click',async()=>{
+      if(!deferredPrompt){showToast('Use browser menu → Add to Home screen');return;}
+      deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null; installBtn.hidden=true;
+    });
+    window.addEventListener('appinstalled',()=>{installBtn.hidden=true;showToast('MX ESPORTS installed!');});
+    function showToast(message){const t=$('toast');t.textContent=message;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400);}
+    if('serviceWorker' in navigator && location.protocol.startsWith('http')){
+      window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+    }
+    const navLinks=[...document.querySelectorAll('.mobile-nav a')];
+    navLinks.forEach(link=>link.addEventListener('click',()=>{navLinks.forEach(a=>a.classList.remove('active'));link.classList.add('active');}));
+  </script>
+</body>
+</html>
