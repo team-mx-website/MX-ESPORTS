@@ -1,5 +1,5 @@
-const CACHE_NAME = "mx-esports-v1";
-const APP_FILES = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg"];
+const CACHE_NAME = "mx-esports-v2";
+const APP_FILES = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg", "./mx-logo.png", "./icon-192.png", "./icon-512.png"];
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_FILES)));
   self.skipWaiting();
